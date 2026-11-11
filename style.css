@@ -1,4 +1,3 @@
-
 /* RESET */
 * {
     margin: 0;
@@ -18,6 +17,7 @@ body {
     color: #1d1d1f;
     line-height: 1.7;
     -webkit-font-smoothing: antialiased;
+    transition: background 0.3s ease, color 0.3s ease;
 }
 
 a {
@@ -93,6 +93,22 @@ header {
     color: white;
 }
 
+/* Theme Toggle */
+.theme-toggle {
+    padding: 10px 16px;
+    border: 1px solid #d2d2d7;
+    border-radius: 30px;
+    background: transparent;
+    color: inherit;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.theme-toggle:hover {
+    background: #e8e8ed;
+}
+
 /* ========================================
    HERO SECTION
 ======================================== */
@@ -140,7 +156,6 @@ header {
 }
 
 /* BUTTONS */
-
 .button {
     display: inline-flex;
     align-items: center;
@@ -175,7 +190,6 @@ header {
 }
 
 /* PROFILE IMAGE */
-
 .hero-image {
     margin-top: 55px;
 }
@@ -205,6 +219,7 @@ main {
     background: #ffffff;
     border-radius: 28px;
     scroll-margin-top: 90px;
+    transition: background 0.3s ease, color 0.3s ease;
 }
 
 .section-heading {
@@ -223,10 +238,7 @@ main {
     font-size: 16px;
 }
 
-/* ========================================
-   ABOUT
-======================================== */
-
+/* ABOUT */
 .about-card {
     max-width: 800px;
 }
@@ -241,10 +253,7 @@ main {
     margin-bottom: 0;
 }
 
-/* ========================================
-   SKILLS
-======================================== */
-
+/* SKILLS */
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -255,7 +264,7 @@ main {
     padding: 28px;
     background: #f5f5f7;
     border-radius: 20px;
-    transition: transform 0.25s ease;
+    transition: transform 0.25s ease, background 0.3s ease;
 }
 
 .skill-card:hover {
@@ -291,10 +300,7 @@ main {
     padding: 5px 0;
 }
 
-/* ========================================
-   EDUCATION
-======================================== */
-
+/* EDUCATION */
 .education-card {
     padding: 35px;
     background: #f5f5f7;
@@ -330,10 +336,38 @@ main {
     font-weight: 600;
 }
 
-/* ========================================
-   PROJECTS
-======================================== */
+/* EDUCATION TABLE */
+.education-table {
+    width: 100%;
+    border-collapse: collapse;
+    overflow: hidden;
+    border-radius: 12px;
+}
 
+.education-table th,
+.education-table td {
+    padding: 16px;
+    text-align: left;
+    border-bottom: 1px solid #e5e5ea;
+}
+
+.education-table th {
+    background: #f5f5f7;
+    color: #0071e3;
+    font-size: 13px;
+}
+
+.education-table td {
+    background: #ffffff;
+    color: #515154;
+    font-size: 14px;
+}
+
+.education-table tr:last-child td {
+    border-bottom: none;
+}
+
+/* PROJECTS */
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -344,7 +378,7 @@ main {
     background: #f5f5f7;
     padding: 35px;
     border-radius: 24px;
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.3s ease;
 }
 
 .project-card:hover {
@@ -391,10 +425,7 @@ main {
     font-weight: 600;
 }
 
-/* ========================================
-   CAREER GOALS
-======================================== */
-
+/* CAREER GOALS */
 .goals-card {
     display: flex;
     flex-direction: column;
@@ -431,10 +462,7 @@ main {
     font-size: 15px;
 }
 
-/* ========================================
-   CONTACT
-======================================== */
-
+/* CONTACT */
 .contact-card {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -489,7 +517,7 @@ textarea {
     color: #1d1d1f;
     font-size: 14px;
     outline: none;
-    transition: border-color 0.2s ease;
+    transition: border-color 0.2s ease, background 0.3s ease, color 0.3s ease;
 }
 
 input:focus,
@@ -515,15 +543,13 @@ form .button {
     font-size: 11px;
 }
 
-/* ========================================
-   FOOTER
-======================================== */
-
+/* FOOTER */
 footer {
     text-align: center;
     padding: 45px 20px;
     background: #ffffff;
     border-top: 1px solid #e5e5ea;
+    transition: background 0.3s ease, color 0.3s ease;
 }
 
 .footer-logo {
@@ -552,6 +578,147 @@ footer .copyright {
 
 .back-to-top:hover {
     text-decoration: underline;
+}
+
+/* ========================================
+   DARK MODE
+======================================== */
+
+body.dark-mode {
+    background: #000000;
+    color: #f5f5f7;
+}
+
+/* Header and navigation */
+body.dark-mode header,
+body.dark-mode .navbar {
+    background: rgba(0, 0, 0, 0.92) !important;
+    border-bottom: 1px solid #292929;
+}
+
+body.dark-mode .logo,
+body.dark-mode .nav-links a:not(.nav-contact) {
+    color: #f5f5f7;
+}
+
+body.dark-mode .nav-links a:hover {
+    color: #60a5fa;
+}
+
+body.dark-mode .nav-links .nav-contact {
+    background: #0071e3;
+    color: #ffffff;
+}
+
+/* Hero */
+body.dark-mode .hero h1 {
+    color: #f5f5f7;
+}
+
+body.dark-mode .hero-description {
+    color: #a1a1a6;
+}
+
+/* Main sections */
+body.dark-mode .section {
+    background: #161617;
+    color: #f5f5f7;
+}
+
+body.dark-mode .section-heading h2,
+body.dark-mode .section h3,
+body.dark-mode .section label {
+    color: #f5f5f7;
+}
+
+body.dark-mode .section-description,
+body.dark-mode .about-card p,
+body.dark-mode .skill-card li,
+body.dark-mode .education-program,
+body.dark-mode .project-card p,
+body.dark-mode .goal-item p,
+body.dark-mode .contact-info p {
+    color: #b0b0b5;
+}
+
+/* Cards */
+body.dark-mode .skill-card,
+body.dark-mode .project-card,
+body.dark-mode .education-card {
+    background: #242426;
+    color: #f5f5f7;
+}
+
+/* Small accent blocks */
+body.dark-mode .card-icon,
+body.dark-mode .goal-number {
+    background: #263d5c;
+    color: #60a5fa;
+}
+
+body.dark-mode .project-tags span {
+    background: #38383a;
+    color: #e5e5e7;
+}
+
+/* Education table */
+body.dark-mode .education-table th {
+    background: #29292b;
+    color: #60a5fa;
+}
+
+body.dark-mode .education-table td {
+    background: #1c1c1e;
+    color: #e5e5e7;
+    border-color: #38383a;
+}
+
+/* Buttons */
+body.dark-mode .secondary-button {
+    background: #2c2c2e;
+    color: #f5f5f7;
+}
+
+body.dark-mode .secondary-button:hover {
+    background: #3a3a3c;
+}
+
+/* Contact form */
+body.dark-mode input,
+body.dark-mode textarea {
+    background: #242426;
+    color: #f5f5f7;
+    border-color: #424245;
+}
+
+body.dark-mode input::placeholder,
+body.dark-mode textarea::placeholder {
+    color: #8e8e93;
+}
+
+/* Footer */
+body.dark-mode footer {
+    background: #000000;
+    color: #f5f5f7;
+    border-top: 1px solid #292929;
+}
+
+body.dark-mode footer p {
+    color: #a1a1a6;
+}
+
+body.dark-mode .footer-logo {
+    color: #f5f5f7;
+}
+
+/* Theme toggle */
+body.dark-mode .theme-toggle {
+    border-color: #424245;
+    color: #f5f5f7;
+}
+
+body.dark-mode .theme-toggle:hover {
+    background: #2c2c2e;
 }
 
 /* ========================================
@@ -668,7 +835,6 @@ footer .copyright {
 }
 
 /* ACCESSIBILITY */
-
 @media (prefers-reduced-motion: reduce) {
     html {
         scroll-behavior: auto;
@@ -679,37 +845,5 @@ footer .copyright {
     *::after {
         transition-duration: 0.01ms !important;
         animation-duration: 0.01ms !important;
-
-        /* EDUCATION TABLE */
-
-.education-table {
-    width: 100%;
-    border-collapse: collapse;
-    overflow: hidden;
-    border-radius: 12px;
-}
-
-.education-table th,
-.education-table td {
-    padding: 16px;
-    text-align: left;
-    border-bottom: 1px solid #e5e5ea;
-}
-
-.education-table th {
-    background: #f5f5f7;
-    color: #0071e3;
-    font-size: 13px;
-}
-
-.education-table td {
-    background: #ffffff;
-    color: #515154;
-    font-size: 14px;
-}
-
-.education-table tr:last-child td {
-    border-bottom: none;
-}
     }
 }
